@@ -1,0 +1,46 @@
+{% load static %}
+
+{% for product in products %}
+<div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+
+
+    <div class="card mb-4 shadow-sm">
+        <!-- Imagen del producto -->
+        <div class="card-img-wrapper">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+            {% else %}
+                <img src="{% static 'img/placeholder.jpg' %}" class="card-img-top" alt="Sin imagen">
+
+            {% endif %}
+        </div>
+
+        <!-- Información del producto -->
+        <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            
+        </div>
+    </div>
+</div>
+{% empty %}
+<p>No hay productos disponibles.</p>
+{% endfor %}
+
+<!-- CSS para mantener tarjetas uniformes -->
+<style>
+.card-img-wrapper {
+    width: 100%;             
+    aspect-ratio: 1 / 1;     
+    overflow: hidden;         
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       
+}
+</style>

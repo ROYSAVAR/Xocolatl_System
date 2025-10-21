@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <style>
+  body, html, a, button, input, label, .navmenu li, .menu-item {
+    cursor: url("/static/img/molinillo80.png") 0 0, auto !important;
+  }
+
+  </style>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Xocolatl Mexica</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.ico' %}" rel="icon">
+  
+  
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy:wght@400&display=swap" rel="stylesheet">
+
+ <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+   <!-- Main CSS File -->
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Delicious
+  * Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="{% url 'home' %}" class="logo d-flex align-items-center">
+        <!-- Logo desde static -->
+        <img src="{% static 'img/logo-Xocolatl-Mexica3.png' %}" alt="Logo Xocolatl"> 
+        <h1 class="sitename">Xocolatl Mexica</h1>
+        </a>
+
+
+        <nav id="navmenu" class="navmenu">
+        <div class="papel-picado"></div>
+        <ul>
+            <li><a href="#hero" class="active">Inicio</a></li>
+            <li><a href="#about">Nosotros</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#specials">Especiales</a></li>
+            <li><a href="#events">Eventos</a></li>
+            <li><a href="#gallery">Galería</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+    <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+        <img src="{% static 'img/hero-carousel/templo2.jpg' %}" alt="">
+        <div class="carousel-container">
+            <!-- Logo del negocio -->
+            <img src="{% static 'img/logo_xoco_azulnegro.png' %}" alt="Xoco Logo" class="logo-overlay">
+
+        </div>
+        </div><!-- End Carousel Item -->
+
+
+
+        <div class="carousel-item">
+          <img src="{% static 'img/hero-carousel/cacao2.avif' %}" alt="">
+          <div class="carousel-container">
+            
+            <p>
+              Desde 1989 fabricamos un Xocolatl artesanal puro hecho con cacao orgánico 100% mexicano y con sabores naturales ancestrales.
+            </p>
+
+            <p>
+              Ven a disfrutar las distintas variedades de Xocolatl y diversos alimentos a base de cacao.
+              Los invitamos con gusto a conocer nuestros productos y disfrutar de una experiencia única en el mundo del chocolate.
+            </p>
+
+            <div>
+              <a href="#menu" class="btn-get-started">Nuestro Menú</a>
+              
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+
+        <div class="carousel-item">
+          <img src="{% static 'img/hero-carousel/templo.jpg' %}" alt="">
+          <div class="carousel-container">
+            <h2>La Chocolatería</h2>
+            <p>En la chocolatería del Barrio del Encino, pueden degustar en mesas el chocolate que fabricamos con muchas combinaciones posibles acompañados con tamales, crepas, repostería casera y frutas con chocolate. También pueden llevar a casa la variedad de chocolates empacados que elaboramos.</p>
+            <div>
+              <a href="#menu" class="btn-get-started">Nuestro Menú</a>
+              
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section light-background">
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'img/gallery/mesas.png' %}" class="img-fluid" alt="">
+            <a href="https://www.youtube.com/watch?v=jsmdZHDYTyA&t=7s" class="glightbox pulsating-play-btn"></a>
+          </div>
+          
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+          <h3>Chocolate artesanal con cacao 100% mexicano.</h3>
+          
+        
+          <model-viewer src="{% static '3DModels/cacao.glb' %}"
+                        alt="Semilla de cacao"
+                        auto-rotate
+                        camera-controls
+                        style="width: 600px; height: 400px;">
+          </model-viewer>
+        </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Por qué elegirnos?</h2>
+        <div><span>Por qué elegir a</span> <span class="description-title"> Xocolatl Mexica</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-item">
+            <span>01</span>
+            <h4><a class="stretched-link">Cacao 100% Natural y Artesanal</a></h4>
+            <p>En Xocolatl Mexica utilizamos cacao puro, cultivado y procesado con respeto a la tradición, para garantizar un sabor auténtico en cada producto.</p>
+          </div>
+        </div><!-- Card Item -->
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-item">
+            <span>02</span>
+            <h4><a class="stretched-link">Elaboración Propia y Control Total</a></h4>
+            <p>Todos nuestros chocolates y productos son hechos 100% por nosotros, asegurando calidad en cada detalle.</p>
+          </div>
+        </div><!-- Card Item -->
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-item">
+            <span>03</span>
+            <h4><a class="stretched-link">Variedad Única de Sabores</a></h4>
+            <p>Ofrecemos una amplia gama de sabores exclusivos, como chile, pimienta, hierbabuena y más, para que disfrutes el chocolate de formas originales y deliciosas.</p>
+          </div>
+        </div><!-- Card Item -->
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+<!-- Menu Section -->
+<section id="menu" class="menu section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Menu</h2>
+    <div><span>Revisa nuestro delicioso</span> <span class="description-title">Menú</span></div>
+  </div><!-- End Section Title -->
+
+  <!-- Productos Search Start -->
+  <div class="container mt-5">
+    
+  
+    <!-- Buscador y categoría -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4 class="text-center">Nombre</h4>
+            <input type="text" id="search-name" class="form-control" placeholder="Buscar por nombre">
+        </div>
+        <div class="col-md-6">
+            <h4 class="text-center">Categoría</h4>
+            <select name="category" class="form-control" id="category-select">
+                <option value="todo">Todo</option>
+                {% for category in categories %}
+                <option value="{{ category.id }}">{{ category.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+
+    <!-- Contenedor de productos -->
+    <div class="row" id="products-container">
+        {% include "partials/products_list.html" %}
+    </div>
+
+  </div><!-- End Productos -->
+</section>
+
+<!-- Script AJAX -->
+<script>
+const categorySelect = document.getElementById("category-select");
+const nameInput = document.getElementById("search-name");
+
+function fetchProducts() {
+    const category = categorySelect.value;
+    const name = nameInput.value;
+
+    const params = new URLSearchParams({category, name});
+
+    fetch(`/filter-products/?${params.toString()}`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("products-container").innerHTML = data.html;
+        })
+        .catch(error => console.error("Error al cargar productos:", error));
+}
+
+// Filtrar al cambiar de categoría
+categorySelect.addEventListener("change", fetchProducts);
+
+// Filtrar al escribir en nombre (en tiempo real)
+nameInput.addEventListener("input", fetchProducts);
+</script>
+
+
+</section><!-- /END Menu Section -->
+
+    
+    <!-- Specials Section -->
+<section id="specials" class="specials section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Especialidades</h2>
+    <div><span>Nuestras </span> <span class="description-title">Especialidades</span></div>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row">
+      <div class="col-lg-3">
+        <ul class="nav nav-tabs flex-column">
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" href="#specials-tab-1">Repostería</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-2">Crepas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-3">Granizos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-4">Tamales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-5">Chocolate para preparar</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-9 mt-4 mt-lg-0">
+        <div class="tab-content">
+
+          <!-- Tab 1 -->
+          <div class="tab-pane active show" id="specials-tab-1">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Fondant</h3>
+                <p class="fst-italic">En Xocolatl Mexica, cada producto es elaborado 100% por nosotros, combinando tradición y pasión. Usamos solo cacao puro para ofrecerte sabores auténticos y únicos en cada bocado.</p>
+                <p>El fondant es uno de los productos de repostería que podrás encontrar en el menú. Es un pastel de cacao de sabor intenso, con un centro suave que se disfruta caliente o frío, bañado en chocolate fundido.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'img/fondant.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2 -->
+          <div class="tab-pane" id="specials-tab-2">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Crepas</h3>
+                <p class="fst-italic">En Xocolatl Mexica, cada crepa es preparada desde cero con masa elaborada por nosotros y chocolate artesanal, usando cacao puro.</p>
+                <p>Ofrecemos crepas con chocolate rellenas de fresa, plátano, manzana o combinadas, y puedes personalizarlas con nuez, cacahuate o amaranto. Una experiencia dulce, natural y hecha con dedicación.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'img/crepa.png' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3 -->
+          <div class="tab-pane" id="specials-tab-3">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Granizo</h3>
+                <p class="fst-italic">El granizo de Xocolatl Mexica es una bebida refrescante elaborada con hielo y cacao natural, perfecta para los días de calor.</p>
+                <p>No es un raspado tradicional: puedes disfrutarlo en agua o leche, y su sabor auténtico resalta gracias a nuestro cacao artesanal. Una forma deliciosa y diferente de refrescarte.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'img/granizo.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4 -->
+          <div class="tab-pane" id="specials-tab-4">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Tamales</h3>
+                <p class="fst-italic">Nuestros tamales son preparados de manera tradicional, con ingredientes frescos y el sabor auténtico de casa.</p>
+                <p>Contamos con tamales de rojo, verde, rajas con queso y una versión especial de chocolate, hecha con nuestro cacao natural. Perfectos para acompañar cualquier momento del día.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'img/tamales.png' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 5 -->
+          <div class="tab-pane" id="specials-tab-5">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Chocolate para preparar en casa</h3>
+                <p class="fst-italic">En Xocolatl Mexica te ofrecemos cacao y chocolate artesanal para preparar en casa, elaborado con ingredientes naturales y respetando nuestras raíces.</p>
+                <p>Contamos con bolsas de chocolate en diferentes sabores: chile, pimienta, hierbabuena, canela, vainilla y magnolia. Todos ellos contienen cacao natural y un toque de azúcar, ideales para bebidas tradicionales o recetas especiales.</p>
+                <p>Además, ofrecemos cacao 100% puro sin azúcar, perfecto para quienes buscan un sabor intenso y auténtico. Con él puedes preparar desde bebidas y postres, hasta salsas y platillos con un toque tradicional.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'img/bolsitas.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- /Specials Section -->
+
+
+<!-- Events Section -->
+<section id="events" class="events section">
+
+  <img class="slider-bg" src="{% static 'img/cacao2.avif' %}" alt="" data-aos="fade-in">
+
+  <div class="container">
+
+    <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          }
+        }
+      </script>
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="row gy-4 event-item">
+            <div class="col-lg-6">
+              <img src="{% static 'img/morenito.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>Eventos y Fiestas Privadas</h3>
+              <div class="price">
+                <p><span>¡Contáctanos!</span></p>
+              </div>
+              <p class="fst-italic">
+                Haz de tu evento una experiencia única con el sabor ancestral de Xocolatl. Ofrecemos productos artesanales ideales para fiestas, reuniones privadas y celebraciones especiales.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-circle"></i> <span>Atención personalizada para cada tipo de evento.</span></li>
+                <li><i class="bi bi-check2-circle"></i> <span>Productos frescos, artesanales y con identidad cultural.</span></li>
+                <li><i class="bi bi-check2-circle"></i> <span>Opciones para entregar recuerdos o brindar degustaciones.</span></li>
+              </ul>
+              <p>
+                Ya sea un cumpleaños, una boda íntima o una reunión corporativa, lleva nuestros sabores hasta donde estés. Contáctanos para cotizar y conocer todas las opciones que tenemos para ti. 
+                ¡Celebra con tradición y dulzura!
+              </p>
+            </div>
+          </div>
+        </div><!-- End Slider item -->
+
+        <div class="swiper-slide">
+          <div class="row gy-4 event-item">
+            <div class="col-lg-6">
+              <img src="{% static 'img/puros.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>Ferias y Eventos Culturales</h3>
+              <div class="price">
+                <p><span>Tradición que se comparte</span></p>
+              </div>
+              <p class="fst-italic">
+                Participamos en ferias, expos y eventos culturales llevando nuestros productos a donde nace el amor por nuestras raíces.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-circle"></i> <span>Presencia en eventos comunitarios y culturales.</span></li>
+                <li><i class="bi bi-check2-circle"></i> <span>Degustaciones, venta y talleres disponibles.</span></li>
+              </ul>
+              <p>
+                Si estás organizando un evento, ¡invítanos y hagamos equipo!
+              </p>
+            </div>
+          </div>
+        </div><!-- End Slider item -->
+
+        <div class="swiper-slide">
+          <div class="row gy-4 event-item">
+            <div class="col-lg-6">
+              <img src="{% static 'img/fresa.png' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>Pedidos Especiales</h3>
+              <div class="price">
+                <p><span>100% Personalizados</span></p>
+              </div>
+              <p class="fst-italic">
+                Crea un regalo único o sorprende en tu evento con pedidos personalizados. Desde empaques hasta sabores.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-circle"></i> <span>Elige diseños, cantidades y sabores de chocolate.</span></li>
+                <li><i class="bi bi-check2-circle"></i> <span>Ideal para regalos empresariales o celebraciones.</span></li>
+              </ul>
+              <p>
+                Escríbenos y platícanos tu idea. Nosotros la volvemos cacao.
+              </p>
+            </div>
+          </div>
+        </div><!-- End Slider item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section><!-- /Events Section -->
+
+
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Galería</h2>
+    <div><span>Algunas fotos de</span> <span class="description-title">nuestra chocolatería !!</span></div>
+  </div><!-- End Section Title -->
+
+  <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row g-0">
+
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="{% static 'img/gallery/templo.jpg' %}" class="glightbox" data-gallery="images-gallery">
+            <img src="{% static 'img/gallery/templo.jpg' %}" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div><!-- End Gallery Item -->
+
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="{% static 'img/gallery/palitos.png' %}" class="glightbox" data-gallery="images-gallery">
+            <img src="{% static 'img/gallery/palitos.png' %}" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div><!-- End Gallery Item -->
+
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="{% static 'img/gallery/fresas.png' %}" class="glightbox" data-gallery="images-gallery">
+            <img src="{% static 'img/gallery/fresas.png' %}" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div><!-- End Gallery Item -->
+
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="{% static 'img/gallery/crepa.png' %}" class="glightbox" data-gallery="images-gallery">
+            <img src="{% static 'img/gallery/crepa.png' %}" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div><!-- End Gallery Item -->
+
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="{% static 'img/gallery/pay.png' %}" class="glightbox" data-gallery="images-gallery">
+            <img src="{% static 'img/gallery/pay.png' %}" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div><!-- End Gallery Item -->
+
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="{% static 'img/gallery/frente.png' %}" class="glightbox" data-gallery="images-gallery">
+            <img src="{% static 'img/gallery/frente.png' %}" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div><!-- End Gallery Item -->
+
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="{% static 'img/gallery/mesas.png' %}" class="glightbox" data-gallery="images-gallery">
+            <img src="{% static 'img/gallery/mesas.png' %}" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div><!-- End Gallery Item -->
+
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="{% static 'img/gallery/templo2.jpg' %}" class="glightbox" data-gallery="images-gallery">
+            <img src="{% static 'img/gallery/templo2.jpg' %}" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div><!-- End Gallery Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Gallery Section -->
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+       
+        <div><span>Encuentranos !!</span> <span class="description-title">Nuestra ubicación :</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="mb-5">
+        <iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3702.560648875409!2d-102.29511192430826!3d21.874476279995097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ee790e785079%3A0x94435e5f2a077633!2sXocolatl%20Mexica%20Encino!5e0!3m2!1ses!2smx!4v1749780043597!5m2!1ses!2smx" frameborder="0" allowfullscreen=""></iframe>
+        
+      </div><!-- End Google Maps -->
+
+      
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div class="address">
+            <h4>Dirección</h4>
+            <p>Abasolo 119, Barrio del Encino</p>
+            <p>Aguascalientes, Ags. 20240</p>
+            <p></p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contacto</h4>
+            <p>
+              <strong>Telefono:</strong> <span>+52 449 175 5077</span><br>
+              <strong>Email:</strong> <span>cacao@xocolatlmexica.com</span><br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Horarios</h4>
+            <p>
+              <strong>Miércoles a Lunes:</strong><br>
+              <span>11:30 am - 2:30 pm</span><br>
+              <span>6:30 pm - 10:00 pm</span><br><br>
+              <strong>Martes:</strong> <span>¡Descansamos!🤎</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4>Síguenos</h4>
+          <div class="social-links d-flex">
+            <a href="https://www.facebook.com/XocolatlMexica/" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/xocolatl_mexica/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/524491755077" class="whatsapp" target="_blank"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Xocolatl Mexica.</strong> <span>Todos los derechos reservados.</span></p>
+    </div>
+
+  </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('#navmenu ul li a');
+        
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            confetti({
+              particleCount: 150,
+              spread: 1000,
+              origin: { x: 0.5, y: 0.4 }
+
+            });
+          });
+        });
+      });
+    </script>
+
+
+
+    </body>
+    </html>
